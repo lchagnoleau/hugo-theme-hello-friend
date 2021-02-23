@@ -10,6 +10,11 @@
     {{ end }}
     {{ partial "head.html" . }}
   </head>
+
+  {{ if .Params.asciinema }}
+  <script src="{{ "assets/asciinema-player.js" | absURL }}"></script>
+  {{ end }}
+
   <body class="{{ if ne $.Site.Params.defaultTheme "light" -}} dark-theme {{- end -}}">
     <div class="container">
       {{ partial "header.html" . }}

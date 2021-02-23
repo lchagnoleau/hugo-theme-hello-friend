@@ -48,3 +48,7 @@
 
 <!-- head custom -->
 {{- partial "extended_head.html" . }}
+
+{{ if .Params.asciinema }}
+    <link rel="stylesheet" type="text/css" href="{{ "assets/asciinema-player.css" | absURL }}" />
+{{ end }}
